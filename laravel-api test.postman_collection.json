@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "1eda6bd1-b559-4e5a-be4c-4ee15b977db1",
+		"name": "laravel-api test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "patch fabricante",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "un nombre",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "una direccion",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "221123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/fabricantes",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"fabricantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unauthorized create fabricante",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "un nombre",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "una direccion",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "221123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/fabricantes",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"fabricantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fabricantes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{url}}/api/fabricantes",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"fabricantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch fabricante",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "un nombre patcheado",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "una direccion",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "221123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/fabricantes/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"fabricantes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "abc123",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "test@test.es",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2d9bdeee-8ef6-4f0a-a0da-69d6e4f05fa2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "68bef79e-e989-41ed-bfba-22e6423016b0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
