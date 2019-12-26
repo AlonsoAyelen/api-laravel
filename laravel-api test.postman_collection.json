@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "patch fabricante",
+			"name": "post fabricante",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -45,6 +45,68 @@
 					"path": [
 						"api",
 						"fabricantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post fabricante avion",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "serie",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "modelo",
+							"value": "Modelo Test",
+							"type": "text"
+						},
+						{
+							"key": "longitud",
+							"value": "148.8",
+							"type": "text"
+						},
+						{
+							"key": "capacidad",
+							"value": "135",
+							"type": "text"
+						},
+						{
+							"key": "velocidad",
+							"value": "8370",
+							"type": "text"
+						},
+						{
+							"key": "alcance",
+							"value": "1944",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/fabricantes/1/aviones",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"fabricantes",
+						"1",
+						"aviones"
 					]
 				}
 			},
@@ -125,6 +187,40 @@
 					"path": [
 						"api",
 						"fabricantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fabricantes aviones",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{url}}/api/fabricantes/1/aviones",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"fabricantes",
+						"1",
+						"aviones"
 					]
 				}
 			},
